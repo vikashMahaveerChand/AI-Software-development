@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+<hibernate-configuration>
+    <session-factory>            
+        <property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>  
+        <!-- <property name="connection.url">jdbc:mysql://localhost/wholesale_new</property> -->
+        <property name="connection.url">jdbc:mysql://localhost/inventory_pawnbroker</property>  
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property> -->
+
+		<mapping class="com.inventory.model.Area"/>
+		<mapping class="com.inventory.model.Bank"/>
+		<mapping class="com.inventory.model.BankEntry"/>
+		<mapping class="com.inventory.model.Bill"/>
+		<mapping class="com.inventory.model.BillDetails"/>
+		<mapping class="com.inventory.model.BillNumber"/>
+		<mapping class="com.inventory.model.BillResetMaster"/>
+		<mapping class="com.inventory.model.BillReturnDetails"/>
+		<mapping class="com.inventory.model.BillSource"/>
+		<mapping class="com.inventory.model.BillType"/>
+		<mapping class="com.inventory.model.City"/>
+		<mapping class="com.inventory.model.Contact"/>
+		<mapping class="com.inventory.model.ContactType"/>
+		<mapping class="com.inventory.model.Conversion"/>
+		<mapping class="com.inventory.model.CoverWeight"/>
+		<mapping class="com.inventory.model.DayMaster"/>
+		<mapping class="com.inventory.model.Employee"/>
+		<mapping class="com.inventory.model.EmployeeDetails"/>
+		<mapping class="com.inventory.model.EntryType"/>
+		<mapping class="com.inventory.model.Licence"/>
+		<mapping class="com.inventory.model.LicenceOpeningStockDetails"/>
+        <mapping class="com.inventory.model.LicenceType"/>
+        <mapping class="com.inventory.model.Metal"/>
+        <mapping class="com.inventory.model.MonthMaster"/>
+        <mapping class="com.inventory.model.OldItemDetails"/>
+        <mapping class="com.inventory.model.OpeningBalanceDetailsContact"/>
+        <mapping class="com.inventory.model.OpeningBalanceDetailsLicence"/>
+        <mapping class="com.inventory.model.OpeningStockDetailsLicence"/>
+        <mapping class="com.inventory.model.Ornament"/>
+        <mapping class="com.inventory.model.OrnamentGroup"/>
+        <mapping class="com.inventory.model.OrnamentSubGroup"/>
+        <mapping class="com.inventory.model.PawnBill"/>
+        <mapping class="com.inventory.model.PawnBillAuctionDetails"/>
+        <mapping class="com.inventory.model.PawnBillDetails"/>
+        <mapping class="com.inventory.model.PawnBillRedeemDetails"/>
+        <mapping class="com.inventory.model.PawnBillStatus"/>
+        <mapping class="com.inventory.model.PaymentDetails"/>
+        <mapping class="com.inventory.model.State"/>
+        <mapping class="com.inventory.model.Street"/>
+        <mapping class="com.inventory.model.User"/>
+        <mapping class="com.inventory.model.UserType"/>
+        <mapping class="com.inventory.model.WeekMaster"/>
+        
+        <mapping class="com.inventory.model.pbold.CustomerDetails"/>
+        <mapping class="com.inventory.model.pbold.OldBillDescription"/>
+        <mapping class="com.inventory.model.pbold.OldBillDetails"/>
+    </session-factory>
+</hibernate-configuration>
